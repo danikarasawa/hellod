@@ -30,8 +30,6 @@ public interface UserApi {
     ResponseEntity<Void> update(@RequestBody UserResource resource);
 
     @DeleteMapping("/{email}")
-    ResponseEntity<Void> delete(@RequestBody UserResource resource);
+    ResponseEntity<UserResource> delete(@PathVariable("email") String email);
 
 }
-
-// @PatchMapping - ver detalhe
