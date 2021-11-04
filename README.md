@@ -1,5 +1,5 @@
 # hellod
-Regis Rocha's course about Java (Spring Boot).  
+[Regis Rocha's](https://github.com/regis-rocha) classes about Java (Spring Boot).  
 <img height="50" align="right" src="./img/java-logo.png">
 
 -> 09/09/2021 : API best practices
