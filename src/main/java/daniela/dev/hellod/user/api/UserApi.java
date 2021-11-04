@@ -14,9 +14,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import daniela.dev.hellod.user.api.resource.UserResource;
 
+//@Tag(name = "Usuário", description = "Informações gerais sobre a API")
 @RequestMapping("/user")
 public interface UserApi {
 
+    //@Operation(summary = "título", description = "conteúdo")
+    // @ApiResponses({
+    //     @ApiResponses(responseCode = "201", "mensagem", content = @Content),
+    //     @ApiResponses(responseCode = "500", "mensagem", content = @Content(schema(implementation = UserResource.class)))
+    // })
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<Void> create(@RequestBody UserResource resource);
 
