@@ -27,12 +27,19 @@ public class UserController implements UserApi {
 
         // TODO: Chamar servico que vai persistir esse usuario
 
+        // Tratando os erros de validação
+        // Javax Validation - JSR 303 Bean Validation
+        // é um padrão adotado pelo Java para validação de dados de um determinado bean
+
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @Override
     public ResponseEntity<UserResource> findById(String email) {
         log.info("Recebendo infos: {}", email);
+
+        //throw new NotFoundException("usuario nao encontrado");
+        //Optional.empty().orElse... VERIFICAR
 
         return ResponseEntity.ok(UserResource.builder().phoneNumber("11 233455")
                                                        .name("name")
